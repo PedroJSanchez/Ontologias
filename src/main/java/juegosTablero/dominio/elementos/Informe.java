@@ -14,13 +14,24 @@ import juegosTablero.Vocabulario.Incidencia;
  * @author pedroj
  */
 public class Informe implements Concept {
+    private Juego juego;
     private Incidencia detalle;
 
     public Informe() {
     }
 
-    public Informe(Incidencia detalle) {
+    public Informe(Juego juego, Incidencia detalle) {
+        this.juego = juego;
         this.detalle = detalle;
+    }
+
+    @Slot(mandatory=true)
+    public Juego getJuego() {
+        return juego;
+    }
+
+    public void setJuego(Juego juego) {
+        this.juego = juego;
     }
 
     @Slot(mandatory=true)
@@ -34,6 +45,6 @@ public class Informe implements Concept {
 
     @Override
     public String toString() {
-        return "Informe{" + "detalle=" + detalle + '}';
+        return "Informe{" + "juego=" + juego + ", detalle=" + detalle + '}';
     }
 }

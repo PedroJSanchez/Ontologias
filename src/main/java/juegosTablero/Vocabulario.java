@@ -12,17 +12,18 @@ package juegosTablero;
 public interface Vocabulario {
     
     // Registro en las páginas Amarillas
-    public static final String tipoServicio = "Agente Juegos de Tablero";
+    public static final String TIPO_SERVICIO = "Agente Juegos de Tablero";
     public static enum NombreServicio { 
-        GRUPO_JUEGOS, JUEGO_BARCOS, JUEGO_CONNECTA_4, JUEGO_DOMINO
+        GRUPO_JUEGOS, JUEGO_BARCOS, JUEGO_CONECTA_4, JUEGO_DOMINO
     }
     
     // Elementos para los juegos
     public static enum Motivo { 
-        JUEGOS_ACTIVOS_SUPERADOS, PARTICIPACION_EN_JUEGOS_SUPERADA 
+        JUEGOS_ACTIVOS_SUPERADOS, PARTICIPACION_EN_JUEGOS_SUPERADA, 
+        TIPO_JUEGO_NO_IMPLEMENTADO, DEMASIADOS_JUEGOS_SIN_COMPLETAR
     }
     public static enum Incidencia {
-        CANCELACION, ERROR_AGENTE, ERROR_MENSAJE, ERROR_CONTENIDO_MENSAJE
+        CANCELACION, ERROR_AGENTE, ERROR_MENSAJE_INCORRECTO, ERROR_CONTENIDO_MENSAJE
     }
     public static enum Estado {
         GANADOR, ABANDONO, SEGUIR_JUGANDO, FIN_PARTIDA

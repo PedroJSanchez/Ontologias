@@ -7,6 +7,7 @@ package juegosTablero.dominio.elementos;
 
 import jade.content.Concept;
 import jade.content.onto.annotations.AggregateSlot;
+import jade.content.onto.annotations.Slot;
 import jade.util.leap.List;
 
 /**
@@ -14,15 +15,26 @@ import jade.util.leap.List;
  * @author pedroj
  */
 public class ClasificacionJuego implements Concept {
+    private Juego juego;
     private List listaJugadores;
     private List listaPuntuacion;
 
     public ClasificacionJuego() {
     }
 
-    public ClasificacionJuego(List listaJugadores, List listaPuntuacion) {
+    public ClasificacionJuego(Juego juego, List listaJugadores, List listaPuntuacion) {
+        this.juego = juego;
         this.listaJugadores = listaJugadores;
         this.listaPuntuacion = listaPuntuacion;
+    }
+
+    @Slot(mandatory=true)
+    public Juego getJuego() {
+        return juego;
+    }
+
+    public void setJuego(Juego juego) {
+        this.juego = juego;
     }
 
     @AggregateSlot(cardMin=2, type=Jugador.class)

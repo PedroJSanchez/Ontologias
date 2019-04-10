@@ -14,7 +14,6 @@ import juegosTablero.Vocabulario.Color;
  * @author pedroj
  */
 public class Ficha implements Concept {
-    
     private Color color;
 
     public Ficha() {

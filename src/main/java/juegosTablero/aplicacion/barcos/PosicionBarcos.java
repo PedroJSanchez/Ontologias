@@ -16,7 +16,6 @@ import juegosTablero.dominio.elementos.Juego;
  * @author pedroj
  */
 public class PosicionBarcos implements Predicate {
-
     private Juego juego;
     private List localizacionBarcos;
 

@@ -13,7 +13,6 @@ import jade.content.onto.annotations.Slot;
  * @author pedroj
  */
 public class Tablero implements Concept {
-    
     private int dimX;
     private int dimY;
 

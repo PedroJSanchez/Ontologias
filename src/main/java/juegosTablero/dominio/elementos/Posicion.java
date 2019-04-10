@@ -13,7 +13,6 @@ import jade.content.onto.annotations.Slot;
  * @author pedroj
  */
 public class Posicion implements Concept {
-    
     private int coorX;
     private int coorY;
 

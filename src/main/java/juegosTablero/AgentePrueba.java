@@ -23,13 +23,11 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import juegosTablero.Vocabulario.ModoJuego;
 import juegosTablero.Vocabulario.NombreServicio;
+import static juegosTablero.Vocabulario.TIPO_SERVICIO;
 import juegosTablero.Vocabulario.TipoJuego;
-import static juegosTablero.Vocabulario.tipoServicio;
 import juegosTablero.aplicacion.OntologiaJuegoBarcos;
 import juegosTablero.aplicacion.OntologiaJuegoConecta4;
 import juegosTablero.aplicacion.OntologiaJuegoDomino;
-import juegosTablero.aplicacion.barcos.JuegoBarcos;
-import juegosTablero.aplicacion.conecta4.JuegoConecta4;
 import juegosTablero.aplicacion.domino.JuegoDomino;
 import juegosTablero.dominio.elementos.Juego;
 import juegosTablero.dominio.elementos.ProponerJuego;
@@ -84,7 +82,7 @@ public class AgentePrueba extends Agent {
         DFAgentDescription dfd = new DFAgentDescription();
         dfd.setName(getAID());
 	ServiceDescription sd = new ServiceDescription();
-	sd.setType(tipoServicio);
+	sd.setType(TIPO_SERVICIO);
 	sd.setName(NombreServicio.GRUPO_JUEGOS.toString());
 	dfd.addServices(sd);
 	try {

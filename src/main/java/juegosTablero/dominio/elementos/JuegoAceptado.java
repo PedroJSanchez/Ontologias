@@ -14,7 +14,6 @@ import jade.content.onto.annotations.Slot;
  * @author pedroj
  */
 public class JuegoAceptado implements Predicate {
-    
     private Juego juego;
     private Concept agenteJuego;
 

@@ -14,10 +14,24 @@ import juegosTablero.Vocabulario.Motivo;
  * @author pedroj
  */
 public class Motivacion implements Predicate {
+    private Juego juego;
     private Motivo detalle;
 
-    public Motivacion(Motivo detalle) {
+    public Motivacion() {
+    }
+
+    public Motivacion(Juego juego, Motivo detalle) {
+        this.juego = juego;
         this.detalle = detalle;
+    }
+
+    @Slot(mandatory=true)
+    public Juego getJuego() {
+        return juego;
+    }
+
+    public void setJuego(Juego juego) {
+        this.juego = juego;
     }
 
     @Slot(mandatory=true)
@@ -31,6 +45,6 @@ public class Motivacion implements Predicate {
 
     @Override
     public String toString() {
-        return "Motivacion{" + "detalle=" + detalle + '}';
+        return "Motivacion{" + "juego=" + juego + ", detalle=" + detalle + '}';
     }
 }

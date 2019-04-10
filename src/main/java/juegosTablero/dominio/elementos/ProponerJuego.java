@@ -14,7 +14,6 @@ import jade.content.onto.annotations.Slot;
  * @author pedroj
  */
 public class ProponerJuego implements AgentAction {
-
     private Juego juego;
     private Concept tipoJuego;
 

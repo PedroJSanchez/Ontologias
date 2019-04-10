@@ -15,7 +15,6 @@ import juegosTablero.Vocabulario.TipoJuego;
  * @author pedroj
  */
 public class Juego implements Concept {
-    
     private String idJuego;
     private int minVictorias;
     private ModoJuego modoJuego;
