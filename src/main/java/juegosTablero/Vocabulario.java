@@ -5,6 +5,12 @@
  */
 package juegosTablero;
 
+import jade.content.onto.BeanOntologyException;
+import jade.content.onto.Ontology;
+import juegosTablero.aplicacion.OntologiaJuegoBarcos;
+import juegosTablero.aplicacion.OntologiaJuegoConecta4;
+import juegosTablero.aplicacion.OntologiaJuegoDomino;
+
 /**
  *
  * @author pedroj
@@ -74,4 +80,23 @@ public interface Vocabulario {
     public static final int NUM_FRAGATAS = 2;
     public static final int NUM_FICHAS_DOMINO = 28;
     public static final int NUM_JUGADORES_DOMINO = 4;
+    
+    // Métodos
+    public static Ontology getOntologia( TipoJuego tipoJuego ) throws BeanOntologyException {
+        Ontology resultado = null;
+        
+        switch ( tipoJuego ) {
+            case BARCOS:
+                resultado = OntologiaJuegoBarcos.getInstance();
+                break;
+            case CONECTA_4:
+                resultado = OntologiaJuegoConecta4.getInstance();
+                break;
+            case DOMINO:
+                resultado = OntologiaJuegoDomino.getInstance();
+                break;
+        }
+        
+        return resultado;
+    }
 }
