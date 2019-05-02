@@ -38,7 +38,7 @@ public interface Vocabulario {
     public static enum ModoJuego { UNICO, TORNEO }
     public static enum TipoJuego { BARCOS, CONECTA_4, DOMINO } 
     public static enum Orientacion { HORIZONTAL, VERTICAL }
-    public static enum Colocacion { DERECHA, IZQUIERDA }
+    public static enum Colocacion { DERECHA, IZQUIERDA, PASAR }
     public static enum Efecto { HUNDIDO, TOCADO, AGUA }
     
     public static enum Puntuacion {

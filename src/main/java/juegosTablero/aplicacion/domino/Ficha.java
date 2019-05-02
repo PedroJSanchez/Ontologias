@@ -17,6 +17,8 @@ public class Ficha implements Concept {
     private int valorInf;
 
     public Ficha() {
+        this.valorSup = 0;
+        this.valorInf = 0;
     }
 
     public Ficha(int valorSup, int valorInf) {
