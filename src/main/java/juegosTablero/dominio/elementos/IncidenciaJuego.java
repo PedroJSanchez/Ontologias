@@ -5,22 +5,22 @@
  */
 package juegosTablero.dominio.elementos;
 
-import jade.content.Concept;
 import jade.content.Predicate;
 import jade.content.onto.annotations.Slot;
+import juegosTablero.Vocabulario.Incidencia;
 
 /**
  *
  * @author pedroj
  */
-public class DetalleInforme implements Predicate {
+public class IncidenciaJuego implements Predicate {
     private Juego juego;
-    private Concept detalle;
+    private Incidencia detalle;
 
-    public DetalleInforme() {
+    public IncidenciaJuego() {
     }
 
-    public DetalleInforme(Juego juego, Concept detalle) {
+    public IncidenciaJuego(Juego juego, Incidencia detalle) {
         this.juego = juego;
         this.detalle = detalle;
     }
@@ -35,16 +35,16 @@ public class DetalleInforme implements Predicate {
     }
 
     @Slot(mandatory=true)
-    public Concept getDetalle() {
+    public Incidencia getDetalle() {
         return detalle;
     }
 
-    public void setDetalle(Concept detalle) {
+    public void setDetalle(Incidencia detalle) {
         this.detalle = detalle;
     }
 
     @Override
     public String toString() {
-        return "DetalleInforme{" + "juego=" + juego + ", detalle=" + detalle + '}';
+        return "Informe{" + "juego=" + juego + ", detalle=" + detalle + '}';
     }
 }
